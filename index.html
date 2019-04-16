@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+    	<title></title>
+	<style type="text/css">
+
+    h1{
+        color:white;
+         text-shadow: 2px 2px #FF0000;
+    }
+
+    p{
+         text-shadow: 2px 2px #FF0000;
+    }
+   .b{
+    background-color: #F6EAEA;
+    background-image: url('black.jpg');
+}
+.b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+   .item {
+    width: 350px;
+    height: 300px;
+    background-color: #F6EAEA;
+    margin: 15px;
+    padding: 25px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: "Ubuntu";
+} 
+ .item.d {
+    height: 40px;
+    cursor: pointer;
+    background: #F6EAEA;
+    color: black;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+
+}
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+.bb {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+	</style>
+
+</head>
+<body >
+
+<div class="b">
+    <h1>Random Name</h1>
+<div class="bb">
+	<div class="item a">Today's Session Turn </div>
+<div class="item e" id="demo1">Vetri</div>
+<div class="item c" id='demo2'>Srivalli</div>
+</div>
+
+<div class="item d" onclick="change()">
+    <p>
+   Click Next Person
+    </p>
+  </div>
+</div>
+
+    <script>
+      
+   var demo = ["Veera", "Shasikant", "Himanshu", "Vetri", "Suresh", "Noor", "Omita", "Jai", "Shiwani", "Ajay"];
+console.log(typeof(demo));
+change();
+function change(){
+var i = Math.floor(Math.random()* demo.length);
+console.log(i);
+
+ document.getElementById("demo1").innerHTML = demo[i];
+
+
+var i = Math.floor(Math.random()* demo.length);
+
+document.getElementById("demo2").innerHTML = demo[i];
+  }    
+</script>
+</body>
+</html>
